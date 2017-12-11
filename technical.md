@@ -1,7 +1,7 @@
 # CREEBIES TECHNICAL DOCUMENTATION
 
 # 1. CODES
-- Struct SCreebiesFile: Represents a resources, wrapping around FILE*
+## SCreebiesFile: Represents a resources, wrapping around FILE*
 - Pseudo code
 	```c++
 		struct SCreebiesFile {
@@ -11,7 +11,7 @@
 			EFileType type;
 		}
 	```
-- Enum ECreebiesFileType:
+## ECreebiesFileType:
 - Pseudo code
 	```c++
 		enum ECreebiesFileType {
@@ -21,7 +21,7 @@
 		}
 	```
 
-- Enum ECreebiesLang:
+## ECreebiesLang:
 - Pseudo code
 	```c++
 		enum ECreebiesLang {
@@ -85,8 +85,9 @@ LABEL_5:
       break;
   }
   return v2;
-}```
+} 
+```
 
 # 2. Secert
-- there is a trading creebies rom and a test room that has hidden in the game for
+- There is a trading creebies room (Adoption Center) and a test room that has hidden in the game for
 years =))
