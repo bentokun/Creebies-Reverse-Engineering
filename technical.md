@@ -1,7 +1,6 @@
 # CREEBIES TECHNICAL DOCUMENTATION
 
-1. CODES
-
+#1. CODES
 - Struct SCreebiesFile: Represents a resources, wrapping around FILE*
 - Pseudo code
 	``c++
@@ -14,17 +13,17 @@
 	``
 - Enum ECreebiesFileType:
 - Pseudo code
-	```c++
+	``c++
 		enum ECreebiesFileType {
 			Unassigned = 0,
 			Read = 1,
 			Write = 2
 		}
-	```
+	``
 
 - Enum ECreebiesLang:
 - Pseudo code
-	```c++
+	``c++
 		enum ECreebiesLang {
 			LangEnglish = 1,
 			LangFrance = 2,
@@ -32,9 +31,10 @@
 			LangItalia = 4,
 			LangSpain = 5
 		}
-	```
+	``
 
 - Example in game code:
+``c++
 signed int __fastcall GetSplashScreenFileName(char* scr, int lan)
 {
   signed int v2; 
@@ -85,8 +85,8 @@ LABEL_5:
       break;
   }
   return v2;
-}
+}``
 
-2. Secert
+# 2. Secert
 - there is a trading creebies rom and a test room that has hidden in the game for
 years =))
