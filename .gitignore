@@ -1,0 +1,5 @@
+/build/
+/build-macos/
+/build-windows/
+/api.trace
+.vs/

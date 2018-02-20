@@ -4,7 +4,7 @@
 #include <audio_file.h>
 
 typedef struct CCreebiesAudio {
-	CCreebiesAudioInfo* info; //Reference to info
+    CCreebiesAudioInfo *info; //Reference to info
 } CCreebiesAudio;
 
 #endif

@@ -68,7 +68,8 @@ wav_file* init_wav(int pcm, int countChannel, int
 	sampleRate, int bps, int dataSize, void* data) {
 	wav_file* file = malloc(sizeof(wav_file));
 
-	bps /= 2;
+	/* Fix for corrupted audio played by WMP */
+	if (bps > 8) bps = 8;
 
 	file->descriptor.chunkID = 0x46464952;
 	file->descriptor.format = 0x45564157;
