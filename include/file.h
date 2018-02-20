@@ -6,19 +6,31 @@
  * PRETTIED FROM PSEUDO C CODE OF ASM IN CREEBIES DISASSMEBLE
 */
 
-#include <stddef.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdint.h>
 
-typedef creebies_file creebies_file;
-typedef creebies_file_type creebies_file_type;
+typedef enum CCreebiesFileType {
+	unassign = 0,
+	read = 1,
+	write = 2
+} CCreebiesFileType;
 
-creebies_file* allocate_creebies_file(uint16_t num);
-creebies_file* empty_creebies_file(creebies_file* file) ;
-creebies_file* null_creebies_file(creebies_file* file) ;
-creebies_file* load_creebies_file(creebies_file* file, const char* name, const char* om);
+typedef struct CCreebiesFile {
+	void* destruct_func;
+	FILE* handle;
+	uint32_t size;
+	CCreebiesFileType type;
+} CCreebiesFile;
+
+CCreebiesFile* open_file(const char* path, CCreebiesFileType type);
+int           tell_file(CCreebiesFile* file);
+
+size_t        read_file(CCreebiesFile* file, void* dest, size_t esize, size_t count);
+size_t        write_file(CCreebiesFile* file, void* src, size_t esize, size_t count);
+
+int           seek_file(CCreebiesFile* file, int offset, int origin);
 	
-creebies_file* load_read_type_creebies_file(creebies_file* file, const char* name, const char* om);
-creebies_file* load_write_type_creebies_file(creebies_file* file, const char* name, const char* om);
-
-uint32_t tell_file_size(creebies_file* file);
+void close_file(CCreebiesFile* file);
 	
 #endif
